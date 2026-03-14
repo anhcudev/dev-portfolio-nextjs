@@ -29,7 +29,7 @@ const NavBar = () => {
     { href: "/contact", label: "Contact" },
   ]
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50 transition-colors">
+    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50 transition-colors border-b border-gray-200 dark:border-gray-700 shadow-sm">
       <div className="container max-w-7xl mx-auto px-4">
         {/* Desktop Menu */}
         <div className="flex items-center justify-between h-16">
