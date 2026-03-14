@@ -11,11 +11,14 @@ import { useState } from "react"
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
-
   const pathname = usePathname()
   const theme = "dark"
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle("dark")
   }
 
   const menuItems = [
@@ -26,7 +29,7 @@ const NavBar = () => {
     { href: "/contact", label: "Contact" },
   ]
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50">
+    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50 transition-colors">
       <div className="container max-w-7xl mx-auto px-4">
         {/* Desktop Menu */}
         <div className="flex items-center justify-between h-16">
@@ -50,15 +53,14 @@ const NavBar = () => {
                 </Link>
               )
             })}
+            {/* Dark Mode */}
             <button
+              onClick={toggleDarkMode}
               className={`p-2 rounded-lg hover:bg-gray-100
-             text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer`}
+             dark:text-white hover:text-primary dark:hover:bg-gray-800 transition-colors cursor-pointer`}
             >
-              {theme === "dark" ? (
-                <SunIcon className="w-5 h-5" />
-              ) : (
-                <MoonIcon className="w-5 h-5" />
-              )}
+              <SunIcon className="w-5 h-5 hidden dark:block" />
+              <MoonIcon className="w-5 h-5 dark:hidden" />
             </button>
           </div>
           {/* Mobile menu button */}
@@ -88,21 +90,19 @@ const NavBar = () => {
                   </Link>
                 </div>
               ))}
-              {/*  */}
+              {/* Light/Dark Mode  */}
               <div>
                 <button
+                  onClick={toggleDarkMode}
                   className={`flex items-center py-2 hover:text-primary transition-colors`}
                 >
-                  {theme === "dark" ? (
-                    <>
-                      <SunIcon className="w-5 h-5 mr-2" /> Light Mode
-                    </>
-                  ) : (
-                    <>
-                      <MoonIcon className="w-5 h-5 mr-2" />
-                      Dark Mode
-                    </>
-                  )}
+                  <span className="hidden dark:flex">
+                    <SunIcon className="w-5 h-5 mr-2" /> Light Mode
+                  </span>
+                  <span className="flex dark:hidden">
+                    <MoonIcon className="w-5 h-5 mr-2" />
+                    Dark Mode
+                  </span>
                 </button>
               </div>
             </div>
