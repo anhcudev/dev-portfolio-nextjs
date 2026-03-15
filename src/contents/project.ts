@@ -3,6 +3,7 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
     {
+        id: 1,
         title: 'Chat Application',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],
@@ -10,6 +11,7 @@ export const projects: Project[] = [
         demoLink: 'https://demo.com',
         image: '/projects/chat-app.png',
     }, {
+        id: 2,
         title: 'Chat Application',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],
@@ -17,6 +19,7 @@ export const projects: Project[] = [
         demoLink: 'https://demo.com',
         image: '/projects/chat-app.png',
     }, {
+        id: 3,
         title: 'Chat Application',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],
@@ -24,6 +27,7 @@ export const projects: Project[] = [
         demoLink: 'https://demo.com',
         image: '/projects/chat-app.png',
     }, {
+        id: 4,
         title: 'Chat Application',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],
@@ -31,6 +35,7 @@ export const projects: Project[] = [
         demoLink: 'https://demo.com',
         image: '/projects/chat-app.png',
     }, {
+        id: 5,
         title: 'Chat Application',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],
@@ -38,6 +43,7 @@ export const projects: Project[] = [
         demoLink: 'https://demo.com',
         image: '/projects/chat-app.png',
     }, {
+        id: 6,
         title: 'Chat Application',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],
@@ -45,6 +51,7 @@ export const projects: Project[] = [
         demoLink: 'https://demo.com',
         image: '/projects/chat-app.png',
     }, {
+        id: 7,
         title: 'Chat Application',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],
@@ -52,6 +59,7 @@ export const projects: Project[] = [
         demoLink: 'https://demo.com',
         image: '/projects/chat-app.png',
     }, {
+        id: 8,
         title: 'Chat Application',
         description: 'A real-time chat application using WebSocket technology.',
         technologies: ['React', 'Node.js', 'Socket.io'],

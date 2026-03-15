@@ -4,6 +4,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa"
 
 const Hero = () => {
   return (
+    // Hero Section
     <section className="py-28 container max-w-7xl mx-auto px-4">
       <div className="max-w-3xl mx-auto text-center">
         {/* Avatar */}
@@ -50,6 +51,7 @@ const Hero = () => {
             <FaFacebook />
           </Link>
         </div>
+        {/* View project & Contract me btns */}
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <Link
             href="/projects"
@@ -59,7 +61,7 @@ const Hero = () => {
           </Link>
 
           <Link
-            href="/projects"
+            href="/contact"
             className="bg-gray-500 inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:text-gray-800 hover:bg-gray-300 transition-colors"
           >
             Contact Me
