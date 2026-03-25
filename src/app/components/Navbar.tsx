@@ -5,6 +5,7 @@ import {
   SunIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline"
+import { useTheme } from "next-themes"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
@@ -12,13 +13,14 @@ import { useState } from "react"
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
   const pathname = usePathname()
-  const theme = "dark"
+  const { theme, setTheme } = useTheme()
+
+  // Toggle Dark Mode
+  const toggleDarkMode = () => {
+    setTheme(theme === "dark" ? "light" : "dark")
+  }
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
-  const toggleDarkMode = () => {
-    document.documentElement.classList.toggle("dark")
   }
 
   const menuItems = [
