@@ -23,13 +23,6 @@ export const metadata: Metadata = {
     description: "Frontend Developer Portfolio",
     url: "https://anhcu-portfolio.vercel.app",
     siteName: "Tuan Anh Portfolio",
-    images: [
-      {
-        url: "https://anhcu-portfolio.vercel.app/technologist.svg", // logo
-        width: 1200,
-        height: 630,
-      },
-    ],
     locale: "vi_VN",
     type: "website",
   },
