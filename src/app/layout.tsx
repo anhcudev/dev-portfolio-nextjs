@@ -16,8 +16,23 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Building Portfolio with NextJS",
+  title: "Portfolio Tuan Anh",
+  description: "Frontend Developer Portfolio",
+  openGraph: {
+    title: "Portfolio Tuan Anh",
+    description: "Frontend Developer Portfolio",
+    url: "https://anhcu-portfolio.vercel.app",
+    siteName: "Tuan Anh Portfolio",
+    images: [
+      {
+        url: "https://anhcu-portfolio.vercel.app/technologist.svg", // logo
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "vi_VN",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
